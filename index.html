@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine H<3 A </title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5abab;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f88383;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .text_color {
+            color: white;
+        }
+
+        .size-changing-button {
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Add smooth transition effect */
+            background-color: #ff0000;
+            color: white;
+            border-color: black;
+            border-radius: 10px;
+        }
+
+        .yes-size-changing-button {
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Add smooth transition effect */
+            background-color: #4CAF50;
+            color: white;
+            border-color: black;
+            border-radius: 10px;
+        }
+        
+        .size-changing-button:hover {
+            transform: scale(1.1);
+        }
+
+        .no-button {
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>&#128151; Happy Valentines Day My Darling Haboosh &#128151;</h1>
+    </header>
+
+    <main>
+        <h1>
+            <span style="color: rgb(255, 0, 119)">Will You Be My Valentine?</span>
+            <br>
+            <br>
+            <img src="bear-cute.gif" alt="Description of the GIF"> &nbsp;&nbsp;&nbsp;
+            <img src="bear-panda.gif" alt="Description of the GIF">
+            <img src="bear-love.gif" alt="Description of the GIF">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="./yes.html" class="yes-size-changing-button">YES</a>
+            <a href="#" class="size-changing-button" onclick="adjustButtonSizes(); return false;">NO</a>
+        </h1>
+    </main>
+
+    <script>
+        var buttonClickCount = 0; // To keep track of the number of times the "NO" button is clicked
+    
+        function adjustButtonSizes() {
+            var yesButton = document.querySelector('.yes-size-changing-button');
+            var noButton = document.querySelector('.size-changing-button');
+
+            // Adjust the scaling factors for each button independently
+            var scaleFactorYes = 1.2 + 0.1 * buttonClickCount; // Increase factor for "YES"
+            var scaleFactorNo = 0.8 - 0.1 * buttonClickCount; // Decrease factor for "NO"
+    
+            // Scale each button independently
+            yesButton.style.transform = 'scale(' + scaleFactorYes + ')';
+            noButton.style.transform = 'scale(' + scaleFactorNo + ')';
+    
+            buttonClickCount++;
+        }
+    </script>
+</body>
+</html>
