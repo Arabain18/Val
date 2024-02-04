@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine H<3 A </title>
+    <title>Valentine H &#128151; A </title>
     <style>
         /* Add your CSS styles here */
         body {
@@ -34,7 +34,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 30px;
+            font-size: 40px;
             margin: 4px 2px;
             cursor: pointer;
             transition: all 0.3s ease; /* Add smooth transition effect */
@@ -49,7 +49,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 30px;
+            font-size: 40px;
             margin: 4px 2px;
             cursor: pointer;
             transition: all 0.3s ease; /* Add smooth transition effect */
@@ -88,6 +88,7 @@
             <br>
             <br>
             <a href="./yes.html" class="yes-size-changing-button">YES</a>
+           
             <a href="#" class="size-changing-button" onclick="adjustButtonSizes(); return false;">NO</a>
         </h1>
     </main>
@@ -100,13 +101,43 @@
             var noButton = document.querySelector('.size-changing-button');
 
             // Adjust the scaling factors for each button independently
-            var scaleFactorYes = 1.2 + 0.1 * buttonClickCount; // Increase factor for "YES"
+            var scaleFactorYes = 1.2 + 0.15 * buttonClickCount; // Increase factor for "YES"
             var scaleFactorNo = 0.8 - 0.1 * buttonClickCount; // Decrease factor for "NO"
     
+            var maxScale = 4.7;
             // Scale each button independently
             yesButton.style.transform = 'scale(' + scaleFactorYes + ')';
             noButton.style.transform = 'scale(' + scaleFactorNo + ')';
-    
+            
+            if(buttonClickCount == 0){
+                noButton.innerText = 'Are you sure?';
+            }
+            if(buttonClickCount == 1){
+                noButton.innerText = 'Are you really sure?';
+            }
+            else if(buttonClickCount == 2){
+                noButton.innerText = 'really REALLY sure??';
+            }
+            else if(buttonClickCount == 3){
+                noButton.innerText = 'You hate me?';
+            }
+            else if(buttonClickCount == 4){
+                noButton.innerText = 'IDC';
+            }
+            else if(buttonClickCount==5){
+                noButton.innerText = 'YOU DONT';
+            }
+            else if(buttonClickCount==6){
+                noButton.innerText = 'HAVE A';
+            }
+            else if(buttonClickCount==7){
+                noButton.innerText = 'CHOICE';
+                noButton.remove();
+                yesButton.style.transform = 'scale('+ maxScale + ')';
+            }
+            
+            
+            
             buttonClickCount++;
         }
     </script>
