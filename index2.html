@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .rectangle {
+      width: 100%;
+      height: 100vh; /* 100% of the viewport height */
+      background: linear-gradient(to bottom, #0b0068, #7003b4);
+      background-attachment: fixed; /* Fix the background position */
+      z-index: 1;
+    }
+
+    .second-rectangle {
+      width: 100%;
+      height: 100vh; /* 100% of the viewport height */
+      background: linear-gradient(to bottom, #ffb2d8, #ff2bae);
+      background-attachment: fixed; /* Fix the background position */
+      z-index: 2;
+    }
+
+    #image-container {
+      position: fixed;
+      width: 100%;
+      top: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      pointer-events: none; /* Allow clicking through the image container */
+    }
+
+    #movingImage {
+        width: 100%;
+        height: 500px; /* Adjust the height as needed */
+
+    }
+  </style>
+  <title>Two Rectangles</title>
+</head>
+<body>
+  
+
+  <div class="rectangle">
+    <!-- Content for the first rectangle -->
+  </div>
+
+  <div id="image-container">
+    <img src="Horz-cloud.png" alt="Moving Image" id="movingImage">
+  </div>
+
+  <div class="second-rectangle" id="secondRectangle">
+    <!-- Content for the second rectangle -->
+  </div>
+  
+  <script>
+    window.addEventListener('scroll', function() {
+      const secondRectangle = document.getElementById('secondRectangle');
+      const scrollPosition = window.scrollY;
+  
+      // Adjust the top position of the second rectangle based on the scroll position
+      secondRectangle.style.top = (100 + scrollPosition) + 'vh';
+  
+      const imageContainer = document.getElementById('image-container');
+      imageContainer.style.top = (75 - scrollPosition / 10) + 'vh'; // Adjust the values as needed
+    });
+  </script>
+  
+  
+  
+
+  
+
+</body>
+</html>

@@ -7,59 +7,63 @@
     <style>
         /* Add your CSS styles here */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5abab;
+            font-family: 'Quicksand', sans-serif;
+            text-shadow: 2px 2px 4px #fd6de5;
+            background: linear-gradient(to bottom, #ff82c0, #fc2dfc);
             margin: 0;
-            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
-        header {
-            background-color: #f88383;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            
-        }
+
         main {
-            max-width: 800px;
-            margin: 20px auto;
+            width: 100%;
+            height: 199%;
+            max-width: 945%;
+            max-height: 100%;
             padding: 20px;
+            padding-top:70px;
             text-align: center;
+            background: linear-gradient(to bottom, #ff82c0, #fc2dfc);
+            overflow: auto;
         }
 
         .text_color {
             color: white;
         }
 
-        .yes-size-changing-button {
-            padding: 15px 32px;
-            text-align: bottom left;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 40px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition: all 0.3s ease; /* Add smooth transition effect */
-            background-color: #4CAF50;
-            color: white;
-            border-color: black;
-            border-radius: 10px;
-        }
-
-        .bottom-left-button {
+        .custom-button2 {
             position: absolute;
             bottom: 0;
-            right: 0;
-            margin: 10px; /* Optional margin for spacing */
+            right: 0%;
+            transform: translateX(-50%);
+            margin: 10px;
             padding: 5px 15px;
             text-align: center;
             text-decoration: none;
             font-size: 16px;
             cursor: pointer;
-            background-color: #e25252;
-            color: white;
             border: none;
             border-radius: 10px;
+            z-index: 5;
         }
+
+        .bottom-right-button {
+            background: linear-gradient(to bottom, #ff0f0f, #ff2b83);
+            color: white;
+            right: 100;
+
+        }
+
+        .bottom-right-button:hover {
+            background: linear-gradient(to bottom, #00357a, #872bff);
+        }
+
+
+
+
 
 
     </style>
@@ -67,7 +71,6 @@
 <body>
 
     <header>
-        <h1>&#128151; Happy Valentines Day My Darling Haboosh &#128151;</h1>
     </header>
 
     <main>
@@ -82,7 +85,7 @@
             <br>
             <br>
             <br>
-            <span style="font-size:60px; color: rgb(255, 0, 119) ">&#128151 YAY OKAY!!!! &#128151</span>
+            <span style="font-size:90px; color: rgb(255, 0, 119) ">&#128151 YAY OKAY!!!! &#128151</span>
             <br>
             <br>
             <br>
@@ -90,7 +93,7 @@
             <br>
             <img src="bear-love.gif" alt="Description of the GIF">
 
-            <a href="./secret.html" class="bottom-left-button">secret</a>
+            <a href="./secret2.html" class="custom-button2 bottom-right-button" id="backButton">secret</a>
         </h1>
     </main>
 
